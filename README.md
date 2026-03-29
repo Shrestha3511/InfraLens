@@ -1,23 +1,28 @@
 # InfraLens
 
-AI-powered infrastructure health monitoring and risk prediction system.
+AI-powered infrastructure defect detection and analysis system.
 
-## Problem
-Infrastructure like bridges and buildings develop cracks and structural damage over time. Manual inspections are slow, expensive, and sometimes inaccurate.
+## What it does
+- Classifies infrastructure type (road, bridge, building)
+- Detects defects with bounding boxes (crack, pothole, spalling, etc.)
+- Applies context-aware filtering to prevent wrong predictions
+- Generates structured inspection reports
 
-## Solution
-InfraLens uses computer vision and machine learning to:
-- Detect cracks from images
-- Generate structural health scores
-- Predict failure risk
-- Provide visual analytics dashboard
+## Architecture
+3-stage pipeline:
+1. Scene Classifier
+2. Defect Detector (separate model per scene)
+3. Context-aware Filter
 
 ## Tech Stack
 - Python
+- PyTorch
+- YOLOv8
 - OpenCV
-- Machine Learning
 - Streamlit
 
-## Goal
-To build a scalable and intelligent infrastructure monitoring system.
+## Status
+Under active development.
 
+## Team
+Shrestha Mal and team.
